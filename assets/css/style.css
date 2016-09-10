@@ -4,12 +4,7 @@ body{
 	width: 960px;
 	
 }
-.container {
-	width: 100%;
-	max-width: 960px;
-	margin: 0 auto;
-	clear: both;
-}
+
 
 
 
@@ -235,76 +230,10 @@ input {
 	height: 40px;
 }
 
-@media only screen and (max-width: 980px) {
-	.container {
-		padding: 0 20px;
-		max-width: 768px;
-	}
-	main.container {
-		padding-top: 130px;
-	}
-	.info {
-		max-width: 420px;
-	}
-	.work {
-		width: 100%;
-	}
-	.auth-image {
-		width: 100%;
-		margin-bottom: 20px;
-	}
+/*.container {*/
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto !important,
+	clear: both;
 }
 
-@media only screen and (max-width: 768px) {
-	.main-section,
-	.sidebar {
-		max-width: 100%;
-	}
-	main {
-		overflow: auto;
-	}
-	.work {
-		width: 47%;
-		margin-bottom: 10px;
-	}
-	.work:nth-child(even){
-		margin-right: 0;
-	} 
-	.work:nth-child(odd) {
-		float: right;
-	}
-	.auth-image {
-		width: 50%;
-	}
-	.sidebar {
-		margin-bottom: 40px;
-	}
-}
-
-@media only screen and (max-width: 640px) {
-	#masthead {
-		position: static;
-		margin-bottom: 20px;
-	}
-	header .container {
-		padding: 0;
-	}
-	main.container {
-		padding-top: 0;
-	}
-	#logo,
-	.work,
-	.auth-image {
-		width: 100%;
-	}
-	nav {
-		text-align: center;
-		width: 100%;
-		margin: 15px 0;
-	}
-	nav a {
-		width: 30%;
-		padding-left: 0;
-		margin-left: 0;
-	}
-}
