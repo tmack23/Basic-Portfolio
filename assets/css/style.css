@@ -1,148 +1,161 @@
 body{
-	padding:20px;
-	background-image: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/hexellence.png");
-	width: 960px;
 	
+	/*background-color: black;*/
 }
 
 
 
-
-.logo, .about, .form{
-		font-family: 'Georgia', Times, Times New Roman, serif;
-	}
-.nav {
-	background-color: #fff;
-	color: #000;
-	list-style: none;
-	text-align: right;
-	padding: 0 20px 30px 0;
-	
-	
-}
-.nav > li {
-	display: inline-block;
-	padding: 30px 7px 0 0;
-	font-size: 20px;
-	;
-}
-
-
-.nav > li > a:hover{
-	color: #40bf40;
-}
-
-a{
-	text-decoration: none;
-	color: #777;
-
-}
-
-.logo {
-	color:#fff;
-	float: left;
-	padding: 18px 10px 22px 10px;
-	font-size: 40px;
-	font-weight: bold;
-	background-color:#4aaaa5;
-	margin:0 0 0 10px;
-
-	}
-.line{
-	width: 100%;
-	background-color: #cccccc;
-	font-size: 2px;
-}
-.info {
-	float: left;
-	width: 650px;
-	display: block;
-	color: #000;
-	background-color: #fff;
-	margin: 33px 0 40px 10px;
+/*holds the contents of the page*/
+.container {
+	width: 80%;
+	max-width: 960px;
+	margin: 0 auto !important;
 	clear: both;
-	border: solid;
-	border-color: #dddddd;
-	border-width:1px;
-	    }
-.about{
-	color: #4aaaa5;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+/*navigation bar*/
+.navBar {
+	background-color: #445993;
+	padding: 1px 110px 8px 110px;
+	text-align: left;
+	font-family: 'ariel'; 
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 30px; 
+	color: white ;
+
+}
+
+
+
+/*hitgub and linkedin widgets*/
+.connect{
+float: right;
+margin: 0 20px 2px 0;
+}
+
+.linkImage{
+	height: 50px;
+	width: 50px;
+}
+
+/*the about me font*/
+.about{
+	color: #27282E;
+	font-weight: bold;
+	font-size: 25px;
 	padding: 30px 0 20px 25px;
 
 }	    
-.line2 {
-	align-self: center;
-	width: 92%;
-	background-color: #dddddd;
-	font-size: 3px;
-	margin: 0 20px 0 25px;
-}
-.goat{
-	height: 200px;
-	width: 225px;
-	padding: 20px 10px 10px 25px;
-	float:left;
+
+
+.img{
+	height: 220px;
+	width: 320px;
+box-shadow: 5px 7px #434357;
 }
 
 
-.info p {
-	text-align: justify;
-	padding: 20px 20px 10px 20px;
-	font-size: 20px;
-	color: grey;
-}
 
-.contact{
+/*access the project images and position*/
+  .img_wrap {
 	float: left;
-	width: 270px;
-	margin: 33px 0 0 20px;
-	height: 170px;
-	background-color:#fff;
-	display: block;
-	border: solid;
-	border-color: #dddddd;
-	border-width:1px;
-			}
-
-.contact > h3 {
-font-size: 22px;
-color: #4aaaa5;
-text-align:center;
-margin-top: 20px;
-font-weight: bold;
-font-family: 'Georgia', Times, Times New Roman, serif;
-
-}
-.line3 {
-	align-self: center;
-	width: 80%;
-	background-color: #dddddd;
-	font-size: 2px;
-	margin: 20px 20px 0 25px;
-
+	padding:45px 20px 25px 20px;
+	margin: 20px 0 20px 0;
 }
 
-.github, .stack, .linkedin{
-	width: 50px;
-	height: 50px;
-	margin-top: 23px;
+/*hover effect and styles*/
+/* styles */
+
+.img_description {
+  position: absolute;
+  height: 220px;
+  width: 320px;
+  background:rgba(18, 18, 19, 0.65);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+
+
+/* transition effect. not necessary */
+  transition: opacity .7s, visibility .5s;
 }
 
-.github{
-margin-left: 13px;
+/*creates the hover over effect*/
+ .img_wrap:hover .img_description {
+  visibility: visible;
+  opacity: 1;
 }
 
-.stack{
-	float: left;
-	margin-left:13px;
+/*buttons inside the project images*/
+.project_button{
+position: absolute;
+margin: 180px 200px 20px 100px;
+visibility: hidden;
+opacity: 0;
+transition: opacity .7s, visibility .5s;
 }
-.linkedin{
-float: left;
-margin-left:36px;
+/*brings the buttons into visibility*/
+.img_wrap:hover .project_button{
+  visibility: visible;
+  opacity: 1;
 }
 
+
+
+/*the comment form section*/
+.form-group > .nameGroup{
+	width: 130px;
+}
+
+.form-group > #messageText {
+	height: 160px;
+	width: 420px;	
+}
+
+/*comments section*/
+.comment-section{
+	margin: 80px auto;
+	border-top: solid 1px black;
+	width: 800px; 
+}
+
+/*styles the dynamically created comment box */
+.commentStyle{	
+	border-bottom: solid 1px grey;
+
+}
+
+.commentStyle > p{
+	margin :10px 0 10px 6px;	
+}
+
+.commentStyle > h6{
+
+	margin: 8px 0 5px 6px;
+	font-size: 12px;
+	display: inline-block;
+	font-style: italic;
+	font-weight: bold;
+	
+}
+.commentStyle > h6 > p{
+	font-weight: lighter;
+}
+/*styles the image */
+#commentImg { 
+	height: 40px;
+	width: 40px;
+	margin: 0 8px 0 6px;
+	/*padding-top: 8px 0 0 8px;*/
+	border: solid 1px black;
+	background-color: white;
+ }
+
+
+
+/*static footer styler*/
 .footer{
 	background-color: #666666;
 	font-style: Arial;
@@ -151,89 +164,13 @@ margin-left:36px;
 	width: 100%;
 	height: 80px;
 	text-align: center;
-	padding: 20px 0 0 20px;
-	border-top:solid 7px #4aaaa5;
+	padding: 10px 0 0 20px;
+	border-top:solid 4px #4aaaa5;
+	margin-top: 50px;
 	}
-
+/*footer font*/
 .footer > p {
 padding-top: 20px;
 }
-.image{
-	width: 250px;
-	height: 200px;
-	padding: 20px 20px 10px 40px;
-}
-.images{
-	position: relative;
-}
- .absolute {
-	position: absolute;
-	top: 163px;
-	left:40px;
-	background-color:#4aaaa5;
-	color: white;
-	padding:15px 98px 15px 90px;
-	}
-.absolute2 {
-	position: absolute;
-	top: 163px;
-	left:354px;
-	background-color:#4aaaa5;
-	color: white;
-	padding:15px 89px 15px 88px;
-	
-}
- .absolute3 {
-	position: absolute;
-	top: 397px;
-	left:40px;
-	background-color:#4aaaa5;
-	color: white;
-	padding:15px 86px 15px 83px;
-	
-} .absolute4 {
-	position: absolute;
-	top: 397px;
-	left:354px;
-	background-color:#4aaaa5;
-	color: white;
-	padding:15px 56px 15px 63px;
-	display: inline-block;
-	
-} 
-.absolute5 {
-	position: absolute;
-	top: 630px;
-	left:40px;
-	background-color:#4aaaa5;
-	color: white;
-	padding:15px 60px 15px 59px;
-	
-}
 
-.form {
-	padding: 20px 0 10px 10px;
-	color: #777;
-}
-input {
-	width: 600px;
-	height:20px;
-}
-.message {
-	height: 250px;
-}
-
-.submit {
-	background-color:#4aaaa5;
-	color: white;
-	width: 150px;
-	height: 40px;
-}
-
-/*.container {*/
-	width: 100%;
-	max-width: 960px;
-	margin: 0 auto !important,
-	clear: both;
-}
 
